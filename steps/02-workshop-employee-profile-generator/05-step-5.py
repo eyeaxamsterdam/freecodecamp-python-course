@@ -15,4 +15,14 @@ Use the += operator to add the string , Apartment 4B to your address variable.
 Link: https://www.freecodecamp.org/learn/python-v9/workshop-employee-profile-generator/step-5
 """
 
+first_name = 'John'
+last_name = 'Doe'
+print(first_name)
+print(last_name)
+full_name = first_name + ' ' + last_name
+print(full_name)
+address = '123 Main Street'  
+# --fcc-editable-region--
 
+# --fcc-editable-region--
+print(address)

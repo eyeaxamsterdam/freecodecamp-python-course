@@ -10,4 +10,9 @@ Create a variable first_name which stores the string John and a variable last_na
 Link: https://www.freecodecamp.org/learn/python-v9/workshop-employee-profile-generator/step-1
 """
 
-
+# --fcc-editable-region--
+first_name = 'John'
+last_name = 'Doe'
+print(first_name)
+print(last_name)
+# --fcc-editable-region--

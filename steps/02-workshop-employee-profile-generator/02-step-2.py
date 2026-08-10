@@ -10,4 +10,10 @@ Create a variable full_name by concatenating first_name and last_name. Then prin
 Link: https://www.freecodecamp.org/learn/python-v9/workshop-employee-profile-generator/step-2
 """
 
-
+first_name = 'John'
+last_name = 'Doe'
+print(first_name)
+print(last_name)
+# --fcc-editable-region--
+full_name = first_name + last_name
+# --fcc-editable-region--

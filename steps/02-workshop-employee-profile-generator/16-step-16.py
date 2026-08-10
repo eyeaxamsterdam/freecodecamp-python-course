@@ -14,4 +14,22 @@ Define employee_code as 'DEV-2026-JD-001'. After that, create a variable departm
 Link: https://www.freecodecamp.org/learn/python-v9/workshop-employee-profile-generator/step-16
 """
 
+first_name = 'John'
+last_name = 'Doe'
+full_name = first_name + ' ' + last_name
+address = '123 Main Street'
+address += ', Apartment 4B'
+employee_age = 28
+employee_info = full_name + ' is ' + str(employee_age) + ' years old'
+print(employee_info)
+experience_years = 5
+experience_info = 'Experience: ' + str(experience_years) + ' years'
+print(experience_info)
+position = 'Data Analyst'
+salary = 75000
+employee_card = f'Employee: {full_name} | Age: {employee_age} | Position: {position} | Salary: ${salary}'
+print(employee_card)
 
+# --fcc-editable-region--
+
+# --fcc-editable-region--

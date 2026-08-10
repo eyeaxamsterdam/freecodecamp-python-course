@@ -7,4 +7,11 @@ Update your full_name variable so it concatenates the first_name variable, a spa
 Link: https://www.freecodecamp.org/learn/python-v9/workshop-employee-profile-generator/step-3
 """
 
-
+first_name = 'John'
+last_name = 'Doe'
+print(first_name)
+print(last_name)
+# --fcc-editable-region--
+full_name = first_name + ' ' + last_name
+# --fcc-editable-region--
+print(full_name)
