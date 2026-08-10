@@ -16,5 +16,6 @@ is_student = True
 print(is_student, type(is_student))
 
 # --fcc-editable-region--
-
+age = 20
+print(age, type(age))
 # --fcc-editable-region--
