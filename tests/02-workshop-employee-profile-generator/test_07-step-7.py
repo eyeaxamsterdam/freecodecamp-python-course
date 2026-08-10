@@ -16,8 +16,8 @@ else:
 
 def test_hint_1():
     """You should have a variable named employee_age."""
-    _Node(_code).has_variable("employee_age")
+    assert _Node(_code).has_variable("employee_age")
 
 def test_hint_2():
     """You should assign the integer 28 to your employee_age variable. Do not surround the text with quotes."""
-    _Node(_code).find_variable("employee_age").is_equivalent("employee_age = 28")
+    assert _Node(_code).find_variable("employee_age").is_equivalent("employee_age = 28")

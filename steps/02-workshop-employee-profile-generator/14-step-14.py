@@ -1,8 +1,8 @@
 """
 Step 14
-Currently, employee_card only shows the employee's name. Now you're going to add more information to it. 
+Currently, `employee_card` only shows the employee's name. Now you're going to add more information to it. 
 
-Update the employee_card assignment to include the employee's age. The final string should look like this: Employee: [name] | Age: [age] with [name] replaced with the employee's name, and [age] replaced with the employee's age.
+Update the `employee_card` assignment to include the employee's age. The final string should look like this: `Employee: [name] | Age: [age]` with `[name]` replaced with the employee's name, and `[age]` replaced with the employee's age.
 
 Link: https://www.freecodecamp.org/learn/python-v9/workshop-employee-profile-generator/step-14
 """

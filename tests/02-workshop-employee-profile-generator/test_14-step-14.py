@@ -16,4 +16,4 @@ else:
 
 def test_hint_1():
     """You should update employee_card to use the f-string f'Employee: {full_name} | Age: {employee_age}'."""
-    _Node(_code).find_variable("employee_card").is_equivalent("employee_card = f'Employee: {full_name} | Age: {employee_age}'")
+    assert _Node(_code).find_variable("employee_card").is_equivalent("employee_card = f'Employee: {full_name} | Age: {employee_age}'")

@@ -2,7 +2,7 @@
 Step 6
 The output in the terminal is getting crowded. Before you continue, it's time to clean it up.
 
-Remove all the print() statements from your code.
+Remove all the `print()` statements from your code.
 
 Link: https://www.freecodecamp.org/learn/python-v9/workshop-employee-profile-generator/step-6
 """

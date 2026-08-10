@@ -16,8 +16,8 @@ else:
 
 def test_hint_1():
     """You should have a variable named employee_info."""
-    _Node(_code).has_variable("employee_info")
+    assert _Node(_code).has_variable("employee_info")
 
 def test_hint_2():
     """You should assign full_name + ' is ' to your employee_info variable."""
-    _Node(_code).find_variable("employee_info").is_equivalent("employee_info = full_name + ' is '")
+    assert _Node(_code).find_variable("employee_info").is_equivalent("employee_info = full_name + ' is '")

@@ -16,12 +16,12 @@ else:
 
 def test_hint_1():
     """You should have a variable named last_three."""
-    _Node(_code).has_variable("last_three")
+    assert _Node(_code).has_variable("last_three")
 
 def test_hint_2():
     """You should slice the last three characters of employee_code using negative indexing and assign them your last_three variable."""
-    _Node(_code).find_variable("last_three").is_equivalent("last_three = employee_code[-3:]")
+    assert _Node(_code).find_variable("last_three").is_equivalent("last_three = employee_code[-3:]")
 
 def test_hint_3():
     """You should print last_three to the terminal."""
-    _Node(_code).has_call("print(last_three)")
+    assert _Node(_code).has_call("print(last_three)")

@@ -16,4 +16,4 @@ else:
 
 def test_hint_1():
     """You should add a space (' ') between first_name and last_name."""
-    _Node(_code).find_variable("full_name").is_equivalent("full_name = first_name + ' ' + last_name")
+    assert _Node(_code).find_variable("full_name").is_equivalent("full_name = first_name + ' ' + last_name")

@@ -16,12 +16,12 @@ else:
 
 def test_hint_1():
     """You should have a variable named full_name."""
-    _Node(_code).has_variable("full_name")
+    assert _Node(_code).has_variable("full_name")
 
 def test_hint_2():
     """You should assign a string formed by concatenating first_name and last_name to your full_name variable."""
-    _Node(_code).find_variable("full_name").is_equivalent("full_name = first_name + last_name")
+    assert _Node(_code).find_variable("full_name").is_equivalent("full_name = first_name + last_name")
 
 def test_hint_3():
     """You should print the full_name variable."""
-    _Node(_code).has_call("print(full_name)")
+    assert _Node(_code).has_call("print(full_name)")

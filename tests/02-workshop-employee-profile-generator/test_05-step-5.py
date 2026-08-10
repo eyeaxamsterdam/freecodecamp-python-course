@@ -16,4 +16,4 @@ else:
 
 def test_hint_1():
     """You should use the += operator to add the string , Apartment 4B to the address variable."""
-    _Node(_code).find_aug_variable("address").is_equivalent("address += ', Apartment 4B'")
+    assert _Node(_code).find_aug_variable("address").is_equivalent("address += ', Apartment 4B'")

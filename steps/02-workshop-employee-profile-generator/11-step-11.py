@@ -1,8 +1,8 @@
 """
 Step 11
-Now complete the sentence by updating the employee_info assignment to also concatenate the string  years old at the end, using the + operator. Remember to include a space at the beginning of your string.
+Now complete the sentence by updating the `employee_info` assignment to also concatenate the string ` years old` at the end, using the `+` operator. Remember to include a space at the beginning of your string.
 
-Finally, print employee_info.
+Finally, print `employee_info`.
 
 Link: https://www.freecodecamp.org/learn/python-v9/workshop-employee-profile-generator/step-11
 """

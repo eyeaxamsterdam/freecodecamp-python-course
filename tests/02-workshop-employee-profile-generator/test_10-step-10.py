@@ -16,4 +16,4 @@ else:
 
 def test_hint_1():
     """You should modify the assignment of your employee_info variable by converting employee_age into a string with str(employee_age)."""
-    _Node(_code).find_variable("employee_info").is_equivalent("employee_info = full_name + ' is ' + str(employee_age)")
+    assert _Node(_code).find_variable("employee_info").is_equivalent("employee_info = full_name + ' is ' + str(employee_age)")

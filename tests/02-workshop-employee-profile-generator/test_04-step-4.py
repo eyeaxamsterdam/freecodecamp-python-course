@@ -16,12 +16,12 @@ else:
 
 def test_hint_1():
     """You should have a variable named address."""
-    _Node(_code).has_variable("address")
+    assert _Node(_code).has_variable("address")
 
 def test_hint_2():
     """You should assign the string 123 Main Street to your address variable. Remember to enclose the text between either single or double quotes."""
-    _Node(_code).find_variable("address").is_equivalent("address = '123 Main Street'")
+    assert _Node(_code).find_variable("address").is_equivalent("address = '123 Main Street'")
 
 def test_hint_3():
     """You should print the address variable."""
-    _Node(_code).has_call("print(address)")
+    assert _Node(_code).has_call("print(address)")

@@ -1,6 +1,6 @@
 """
 Step 4
-Next, create a variable address to store the employee's address. Assign it the string 123 Main Street, and finally print address.
+Next, create a variable `address` to store the employee's address. Assign it the string `123 Main Street`, and finally print `address`.
 
 Link: https://www.freecodecamp.org/learn/python-v9/workshop-employee-profile-generator/step-4
 """
@@ -12,5 +12,5 @@ print(last_name)
 full_name = first_name + ' ' + last_name
 print(full_name)
 # --fcc-editable-region--
-address = '123 main street'
+
 # --fcc-editable-region--

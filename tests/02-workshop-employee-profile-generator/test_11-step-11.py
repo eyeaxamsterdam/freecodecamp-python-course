@@ -16,8 +16,8 @@ else:
 
 def test_hint_1():
     """You should concatenate ' years old' to the end of the employee_info variable."""
-    _Node(_code).find_variable("employee_info").is_equivalent("employee_info = full_name + ' is ' + str(employee_age) + ' years old'")
+    assert _Node(_code).find_variable("employee_info").is_equivalent("employee_info = full_name + ' is ' + str(employee_age) + ' years old'")
 
 def test_hint_2():
     """You should print employee_info."""
-    _Node(_code).has_call("print(employee_info)")
+    assert _Node(_code).has_call("print(employee_info)")

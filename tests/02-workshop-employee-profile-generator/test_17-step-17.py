@@ -16,24 +16,24 @@ else:
 
 def test_hint_1():
     """You should have a variable named year_code."""
-    _Node(_code).has_variable("year_code")
+    assert _Node(_code).has_variable("year_code")
 
 def test_hint_2():
     """You should slice employee_code from index 4 to 8 and assign the result to your year_code variable."""
-    _Node(_code).find_variable("year_code").is_equivalent("year_code = employee_code[4:8]")
+    assert _Node(_code).find_variable("year_code").is_equivalent("year_code = employee_code[4:8]")
 
 def test_hint_3():
     """You should have a variable named initials."""
-    _Node(_code).has_variable("initials")
+    assert _Node(_code).has_variable("initials")
 
 def test_hint_4():
     """You should slice employee_code from index 9 to 11 and assign the result to your initials variable."""
-    _Node(_code).find_variable("initials").is_equivalent("initials = employee_code[9:11]")
+    assert _Node(_code).find_variable("initials").is_equivalent("initials = employee_code[9:11]")
 
 def test_hint_5():
     """You should print year_code to the terminal."""
-    _Node(_code).has_call("print(year_code)")
+    assert _Node(_code).has_call("print(year_code)")
 
 def test_hint_6():
     """You should print initials to the terminal."""
-    _Node(_code).has_call("print(initials)")
+    assert _Node(_code).has_call("print(initials)")

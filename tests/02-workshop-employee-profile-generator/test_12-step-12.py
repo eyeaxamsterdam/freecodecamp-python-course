@@ -16,20 +16,20 @@ else:
 
 def test_hint_1():
     """You should have a variable named experience_years."""
-    _Node(_code).has_variable("experience_years")
+    assert _Node(_code).has_variable("experience_years")
 
 def test_hint_2():
     """You should assign the integer 5 to your experience_years variable."""
-    _Node(_code).find_variable("experience_years").is_equivalent("experience_years = 5")
+    assert _Node(_code).find_variable("experience_years").is_equivalent("experience_years = 5")
 
 def test_hint_3():
     """You should have a variable named experience_info."""
-    _Node(_code).has_variable("experience_info")
+    assert _Node(_code).has_variable("experience_info")
 
 def test_hint_4():
     """You should assign a string formed by concatenating 'Experience: ', str(experience_years), and ' years' to your experience_info variable."""
-    _Node(_code).find_variable("experience_info").is_equivalent("experience_info = 'Experience: ' + str(experience_years) + ' years'")
+    assert _Node(_code).find_variable("experience_info").is_equivalent("experience_info = 'Experience: ' + str(experience_years) + ' years'")
 
 def test_hint_5():
     """You should print experience_info."""
-    _Node(_code).has_call("print(experience_info)")
+    assert _Node(_code).has_call("print(experience_info)")

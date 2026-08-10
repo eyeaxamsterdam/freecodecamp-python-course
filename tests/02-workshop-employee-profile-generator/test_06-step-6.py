@@ -16,4 +16,4 @@ else:
 
 def test_hint_1():
     """You should not have any print calls in your code."""
-    len(_Node(_code).find_calls("print")) == 0
+    assert len(_Node(_code).find_calls("print")) == 0
