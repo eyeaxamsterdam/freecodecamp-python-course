@@ -32,7 +32,7 @@ def test_hint_4():
 
 def test_hint_5():
     """You should update employee_card to use the f-string f'Employee: {full_name} | Age: {employee_age} | Position: {position} | Salary: ${salary}'."""
-    assert _Node(_code).find_variable("employee_card").is_equivalent("employee_card = f'Employee: {full_name} | Age: {employee_age} | Position: {position} | Salary: \${salary}'")
+    assert _Node(_code).find_variable("employee_card").is_equivalent("employee_card = f'Employee: {full_name} | Age: {employee_age} | Position: {position} | Salary: ${salary}'")
 
 def test_hint_6():
     """You should print employee_card to the terminal."""

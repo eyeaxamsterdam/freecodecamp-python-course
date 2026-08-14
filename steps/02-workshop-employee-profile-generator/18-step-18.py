@@ -34,5 +34,6 @@ print(year_code)
 initials = employee_code[9:11]
 print(initials)
 # --fcc-editable-region--
-
+last_three = employee_code[-3:]
+print(last_three)
 # --fcc-editable-region--

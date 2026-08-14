@@ -19,5 +19,5 @@ print(age, type(age))
 score = 80.5
 print(isinstance(score, float))
 # --fcc-editable-region--
-
+print(score, type(score))
 # --fcc-editable-region--

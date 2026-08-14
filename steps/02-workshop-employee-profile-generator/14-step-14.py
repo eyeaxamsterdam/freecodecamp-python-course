@@ -19,5 +19,6 @@ experience_years = 5
 experience_info = 'Experience: ' + str(experience_years) + ' years'
 print(experience_info)
 # --fcc-editable-region--
-employee_card = f'Employee: {full_name}'
+employee_card = f'Employee: {full_name} | Age: {employee_age}'
+print(employee_card)
 # --fcc-editable-region--

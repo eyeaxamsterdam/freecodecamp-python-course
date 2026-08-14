@@ -10,11 +10,7 @@ Link: https://www.freecodecamp.org/learn/python-v9/workshop-employee-profile-gen
 first_name = 'John'  
 last_name = 'Doe'  
 # --fcc-editable-region--
-print(first_name)  
-print(last_name)  
 full_name = first_name + ' ' + last_name  
-print(full_name)  
 address = '123 Main Street'  
 address += ', Apartment 4B'  
-print(address)  
 # --fcc-editable-region--

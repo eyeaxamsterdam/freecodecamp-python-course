@@ -22,7 +22,7 @@ print(last_name)
 full_name = first_name + ' ' + last_name
 print(full_name)
 address = '123 Main Street'  
+address += ', Apartment 4B'
 # --fcc-editable-region--
-
+employee_age = 28
 # --fcc-editable-region--
-print(address)

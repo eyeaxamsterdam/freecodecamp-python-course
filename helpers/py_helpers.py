@@ -40,8 +40,8 @@ class Node:
 
     def __repr__(self):
         if self.tree is None:
-            return "Node:\nNone"
-        return "Node:\n" + ast.dump(self.tree, indent=2)
+            return "Node(<empty>)"
+        return f"Node({ast.unparse(self.tree)!r})"
 
     def __str__(self):
         if self.tree is None:

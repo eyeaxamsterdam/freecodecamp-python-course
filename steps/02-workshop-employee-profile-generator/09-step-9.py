@@ -14,5 +14,5 @@ address = '123 Main Street'
 address += ', Apartment 4B'
 employee_age = 28
 # --fcc-editable-region--
-employee_info = full_name + ' is '
+employee_info = full_name + ' is ' + employee_age
 # --fcc-editable-region--

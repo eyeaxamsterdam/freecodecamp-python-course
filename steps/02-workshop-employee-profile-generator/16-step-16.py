@@ -31,5 +31,7 @@ employee_card = f'Employee: {full_name} | Age: {employee_age} | Position: {posit
 print(employee_card)
 
 # --fcc-editable-region--
-
+employee_code = 'DEV-2026-JD-001'
+department = employee_code[0:3]
+print(department)
 # --fcc-editable-region--

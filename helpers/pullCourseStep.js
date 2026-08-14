@@ -134,9 +134,16 @@ function extractPythonHints(md) {
     const descLines = parts[i - 1].trim().split("\n").filter((l) => l.trim());
     const description = stripInlineCode(descLines[descLines.length - 1] || "");
     const jsBlock = parts[i].split("```")[0];
+    // Pattern A: assert(runPython(`expr`)) — JS-level assertion, Python is a bare expression
+    const assertWrap = jsBlock.match(/assert\(runPython\(`([\s\S]*?)`\)\)/);
+    if (assertWrap) {
+      hints.push({ description, assertion: `assert ${assertWrap[1].trim().replace(/\\\$/g, '$').replace(/\\\\\./g, '\\.')}` });
+      continue;
+    }
+    // Pattern B: runPython(`assert ...`) — Python-level assertion already in the code
     const pythonMatch = jsBlock.match(/runPython\(`([\s\S]*?)`\)/);
     if (pythonMatch) {
-      hints.push({ description, assertion: pythonMatch[1] });
+      hints.push({ description, assertion: pythonMatch[1].replace(/\\\$/g, '$').replace(/\\\\\./g, '\\.') });
     }
   }
   return hints;
@@ -185,9 +192,14 @@ function buildTestFile(blockDir, stepFileName, hints) {
     // a JS-level assert(...) and leave the Python string as a bare
     // expression. Normalize to the former so a false result actually fails
     // the pytest test instead of silently being evaluated and discarded.
-    const firstNonBlank = dedented.findIndex((l) => l.trim());
-    if (firstNonBlank !== -1 && !/^assert\b/.test(dedented[firstNonBlank].trim())) {
-      dedented[firstNonBlank] = `assert ${dedented[firstNonBlank]}`;
+    // Only add assert if the block has no assert anywhere — multi-line hints
+    // that start with `import` or assignments already contain their own asserts.
+    const hasAssert = dedented.some((l) => /^assert\b/.test(l.trim()));
+    if (!hasAssert) {
+      const firstNonBlank = dedented.findIndex((l) => l.trim());
+      if (firstNonBlank !== -1) {
+        dedented[firstNonBlank] = `assert ${dedented[firstNonBlank]}`;
+      }
     }
     for (const line of dedented) lines.push(line.trim() ? `    ${line}` : "");
     lines.push("");

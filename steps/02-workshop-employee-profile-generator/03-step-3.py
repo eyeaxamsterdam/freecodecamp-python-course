@@ -12,6 +12,6 @@ last_name = 'Doe'
 print(first_name)
 print(last_name)
 # --fcc-editable-region--
-full_name = first_name + last_name
+full_name = first_name + ' ' + last_name
 # --fcc-editable-region--
 print(full_name)

@@ -14,5 +14,5 @@ print(name)
 print(type(name))
 
 # --fcc-editable-region--
-
+is_student = True
 # --fcc-editable-region--

@@ -16,5 +16,5 @@ Link: https://www.freecodecamp.org/learn/python-v9/workshop-report-card-printer/
 """
 
 # --fcc-editable-region--
-
+name = 'Alice'
 # --fcc-editable-region--
