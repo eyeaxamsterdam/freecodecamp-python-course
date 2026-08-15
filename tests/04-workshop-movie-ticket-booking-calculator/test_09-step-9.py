@@ -25,9 +25,9 @@ def test_hint_2():
 def test_hint_3():
     """You should have print('Discount:', discount) below your if...else statement."""
     if_stmt = """if is_member:
-        discount = 3
-        print('User qualifies for membership discount')
-    else:
-        print('User does not qualify for membership discount')"""
+    discount = 3
+    print('User qualifies for membership discount')
+else:
+    print('User does not qualify for membership discount')"""
     print_call = "print('Discount:', discount)"
     assert _Node(_code).is_ordered(if_stmt, print_call)

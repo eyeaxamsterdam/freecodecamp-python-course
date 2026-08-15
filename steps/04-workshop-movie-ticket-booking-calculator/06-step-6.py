@@ -23,5 +23,6 @@ else:
     print('User is not eligible for Evening shows')
 
 # --fcc-editable-region--
-
+is_member = True
+is_weekend = False
 # --fcc-editable-region--

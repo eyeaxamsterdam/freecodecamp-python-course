@@ -32,10 +32,10 @@ def test_hint_3():
 def test_hint_4():
     """You should have print('Service charges:', service_charges) below your if...elif...else statement."""
     if_stmt = """if seat_type == 'Premium':
-        service_charges = 5
-    elif seat_type == 'Gold':
-        service_charges = 3
-    else:
-        service_charges = 1"""
+    service_charges = 5
+elif seat_type == 'Gold':
+    service_charges = 3
+else:
+    service_charges = 1"""
     print_call = "print('Service charges:', service_charges)"
     assert _Node(_code).find_ifs()[4].find_bodies()[0].is_ordered(if_stmt, print_call)

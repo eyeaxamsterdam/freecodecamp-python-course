@@ -28,5 +28,7 @@ is_weekend = False
 
 discount = 0
 # --fcc-editable-region--
-
+if is_member:
+    discount = 3
+    print('User qualifies for membership discount')    
 # --fcc-editable-region--

@@ -201,7 +201,18 @@ function buildTestFile(blockDir, stepFileName, hints) {
         dedented[firstNonBlank] = `assert ${dedented[firstNonBlank]}`;
       }
     }
-    for (const line of dedented) lines.push(line.trim() ? `    ${line}` : "");
+    // Lines inside an already-open triple-quoted string (e.g. an embedded
+    // `if_stmt = """...\n..."""` snippet used with is_ordered) are literal
+    // string content, not statements — indenting them would shift their
+    // characters and desync the embedded code's own indentation, breaking
+    // it when that string is later parsed as Python on its own. Only add
+    // the function-body indent to lines that are actual statements.
+    let inTripleQuoted = false;
+    for (const line of dedented) {
+      const shouldIndent = !inTripleQuoted;
+      if (((line.match(/"""/g) || []).length) % 2 === 1) inTripleQuoted = !inTripleQuoted;
+      lines.push(line.trim() ? (shouldIndent ? `    ${line}` : line) : "");
+    }
     lines.push("");
   }
 

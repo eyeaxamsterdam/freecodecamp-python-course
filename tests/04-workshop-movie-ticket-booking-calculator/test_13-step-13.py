@@ -25,9 +25,9 @@ def test_hint_2():
 def test_hint_3():
     """You should have print('Extra charges:', extra_charges) below your if...else statement."""
     if_stmt = """if is_weekend:
-        extra_charges = 2
-        print('Extra charges will be applied')
-    else:
-        print('No extra charges will be applied')"""
+    extra_charges = 2
+    print('Extra charges will be applied')
+else:
+    print('No extra charges will be applied')"""
     print_call = "print('Extra charges:', extra_charges)"
     assert _Node(_code).is_ordered(if_stmt, print_call)

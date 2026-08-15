@@ -23,5 +23,6 @@ if age > 17:
 if age >= 21:
     print('User is eligible for Evening shows')
 # --fcc-editable-region--
-
+else:
+    print('User is not eligible for Evening shows')
 # --fcc-editable-region--

@@ -24,5 +24,5 @@ is_member = True
 is_weekend = False
 
 # --fcc-editable-region--
-
+discount = 0
 # --fcc-editable-region--
